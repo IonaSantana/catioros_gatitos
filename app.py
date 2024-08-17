@@ -8,7 +8,6 @@ import os
 app = Flask(__name__)
 
 # Configurações
-os.listdir('best_model.pkl')
 MODEL_PATH = 'best_model.pkl'  # Atualize com o caminho real do seu arquivo pickle
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
