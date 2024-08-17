@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload e Classificação de Imagem</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Classifique sua Imagem</h1>
+    <form action="{{ url_for('classify_image') }}" method="post" enctype="multipart/form-data">
+        <label for="file">Escolha uma imagem:</label>
+        <input type="file" id="file" name="file" accept="image/*" required>
+        <button type="submit">Classificar Imagem</button>
+    </form>
+</body>
+</html>
